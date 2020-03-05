@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ToastNotificationSample</title>
+<script type="text/javascript">
+	function test(){
+		if(Notification.permission != "granted"){
+			Notification.requestPermission();
+		}else{
+		  var notification = new Notification("Hello world!");
+		}
+	}
+</script>
+</head>
+<body>
+<button onClick="test()">通知を表示します</button>
+</body>
+</html>
